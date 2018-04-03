@@ -1,0 +1,4 @@
+#!/bin/sh
+
+echo "* Lightning node 1..."
+exec /usr/bin/lightningd --bitcoin-cli /opt/bin/bitcoin-cli-1 --rpc-file /data/lightning-1/rpc --network regtest --port 9735
