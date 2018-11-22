@@ -20,9 +20,11 @@ RUN apt-get update -qq && \
     	    python \
     	    python3 \
     	    valgrind \
-    	    git
+    	    git \ 
+	    libz-dev
 RUN git clone https://github.com/ElementsProject/lightning.git /opt/lightningd && \
     cd /opt/lightningd && \
+    ./configure && \
     make && \
     cp lightningd/lightningd lightningd/lightning_* cli/lightning-cli /usr/bin/ && \
     rm -rf /opt/lightningd
